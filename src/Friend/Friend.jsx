@@ -1,5 +1,6 @@
 import React from 'react';
 import './Friend.css'
+import { Link } from 'react-router-dom';
 
 const Friend = ({friend}) => {
 console.log(friend);
@@ -10,6 +11,7 @@ const {email, name, id, phone} = friend;
             <h4>{name}</h4>
             <p>Email Address: {email}</p>
             <p>Phone Number: {phone}</p>
+            <p><Link to={`/friend/${id}`}>Show me the details</Link></p>
         </div>
     );
 };

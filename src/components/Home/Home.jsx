@@ -6,6 +6,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
+            <div>{navigation.state === 'loading' && 'Loading...'}</div>
             <Outlet></Outlet>
         </div>
     );
